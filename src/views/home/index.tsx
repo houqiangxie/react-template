@@ -4,11 +4,10 @@
  * @Author: houqiangxie
  * @Date: 2023-05-09 09:48:38
  * @LastEditors: houqiangxie
- * @LastEditTime: 2023-05-09 14:20:14
+ * @LastEditTime: 2024-01-11 10:36:04
  */
 import { useCommonState } from '@/store/common'
-// import { useProxy } from 'valtio/utils'
-import {Button} from 'antd'
+import { Button, Input } from 'antd'
 
 export default function Index() {
     const snap = useProxy(useCommonState)
@@ -20,6 +19,8 @@ export default function Index() {
         <>
             <Button type="primary">Primary Button</Button>
             <div>home</div>
+            <Input />
+
         </>
     )
 }

@@ -1,10 +1,18 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: houqiangxie
+ * @Date: 2023-05-08 14:14:15
+ * @LastEditors: houqiangxie
+ * @LastEditTime: 2024-01-11 10:17:23
+ */
 import {  defineConfig,  loadEnv,  UserConfigExport,  ConfigEnv,  searchForWorkspaceRoot,} from "vite";
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from "node:url";
 import { resolve, join } from "path";
 import viteCompression from "vite-plugin-compression";
 import AutoImport from "unplugin-auto-import/vite";
-import WindiCSS from "vite-plugin-windicss";
+import UnoCSS from 'unocss/vite'
 import postcsspxtoviewport from "postcss-px-to-viewport";
 import Pages from "vite-plugin-pages";
 // https://vitejs.dev/config/
@@ -28,7 +36,6 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       include: [/\.[tj]sx?$/],
       imports: [
         "react",
-        "react-router",
         "react-router-dom",
         { from: "valtio", imports: ["useSnapshot", "proxy", "subscribe"] },
         { from: "valtio/utils", imports: ["useProxy"] },
@@ -37,7 +44,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       dirs: ["./src/components/**"],
       dts: "src/auto-import.d.ts",
     }),
-    WindiCSS(),
+    UnoCSS(),
   ];
   if (!isDev) {
     plugins.push(

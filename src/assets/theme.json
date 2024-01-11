@@ -1,0 +1,10 @@
+{
+    "token": {
+        "colorPrimary": "#87a0ff",
+        "colorInfo": "#87a0ff"
+    },
+    "components": {
+        "Input": {
+        }
+    }
+}
