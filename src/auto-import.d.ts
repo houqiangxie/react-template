@@ -5,6 +5,7 @@
 export {}
 declare global {
   const CommonDiv: typeof import('./components/CommonDiv')['default']
+  const CommonForm: typeof import('./components/CommonForm')['default']
   const Link: typeof import('react-router-dom')['Link']
   const NavLink: typeof import('react-router-dom')['NavLink']
   const Navigate: typeof import('react-router-dom')['Navigate']

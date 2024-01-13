@@ -12,7 +12,9 @@ export default defineConfig({
     // 这里可以放全局公共样式
     'h-btn': 'h-48px w-100% bg-#5C33BE b-none text-white rounded-8px'
   },
-  safelist: [],
+  safelist: [
+    // ...Array.from({ length: 10 }, (_, i) => `grid-cols-${i + 1} grid-rows-${i+1}`),
+  ],
   presets: [
     presetUno(),
     presetAttributify(),
